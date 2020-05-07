@@ -2,6 +2,16 @@
 
 A new Flutter project.
 
+# Instructions
+
+-	[x] The API returns the dish categories and the dishes in that category.
+-	[x] The dish categories should be slidable .
+-	[x] If  a dish has addons(“addoncat”), then it should display the text “Customizations available”.
+-	[x] Clicking on ‘+’ and ‘-’ buttons should update the count accordingly and also on the cart icon on the app bar.
+-	[x] Implement maintainable and reusable coding standards .
+-	[x] The tabs must not be hardcoded, it’s length should change as per API
+
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
