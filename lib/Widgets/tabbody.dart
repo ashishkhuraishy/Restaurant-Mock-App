@@ -28,8 +28,11 @@ class TabBody extends StatelessWidget {
                   Expanded(
                     flex: 1,
                     child: Padding(
-                      padding: const EdgeInsets.only(right:8.0),
-                      child: Image.asset('assets/images/veg.png', height: 28.0,),
+                      padding: const EdgeInsets.only(right: 8.0),
+                      child: Image.asset(
+                        'assets/images/veg.png',
+                        height: 28.0,
+                      ),
                     ),
                   ),
                   Expanded(
@@ -91,6 +94,10 @@ class TabBody extends StatelessWidget {
                         ButtonBarItem(
                           item: cartItem,
                         ),
+                        SizedBox(
+                          height: 8.0,
+                        ),
+                        items[idx].custom ? Customisation(theme: theme) :Container(),
                       ],
                     ),
                   ),
@@ -102,3 +109,29 @@ class TabBody extends StatelessWidget {
   }
 }
 
+class Customisation extends StatelessWidget {
+  const Customisation({
+    Key key,
+    @required this.theme,
+  }) : super(key: key);
+
+  final TextTheme theme;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        children: <Widget>[
+          Text(
+            "Customisation available",
+            style:
+                theme.subtitle2.copyWith(color: Colors.red),
+          ),
+          SizedBox(
+            height: 8.0,
+          ),
+        ],
+      ),
+    );
+  }
+}
